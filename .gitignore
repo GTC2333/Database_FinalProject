@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Data files (large CSVs - keep structure but ignore raw data if needed)
+# 如果原始 CSV 太大可以取消下面注释
+# data/raw/*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
