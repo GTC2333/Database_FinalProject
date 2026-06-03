@@ -148,7 +148,7 @@ python3 generate_charts.py
 - [x] ~~视图/函数/触发器/存储过程/事务~~
 - [x] ~~分析查询与可视化图表~~
 - [ ] ER 图截图（从 MySQL Workbench 导出）
-- [ ] 查询执行结果截图（MySQL Workbench）
+- [x] ~~查询执行结果已嵌入报告（SQL + 结果表格）~~
 - [ ] 索引前后性能对比（EXPLAIN）
 - [x] ~~PPT 制作（插入图表 + 技术演示页）~~
 - [ ] Word 正式报告（Markdown 转 Word）
