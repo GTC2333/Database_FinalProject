@@ -7,9 +7,11 @@ __pycache__/
 *.pyo
 *.egg-info/
 
-# Data files (large CSVs - keep structure but ignore raw data if needed)
-# 如果原始 CSV 太大可以取消下面注释
-# data/raw/*.csv
+# Data files (raw CSVs and zip — too large for git, can download from Kaggle)
+data/
+
+# PPT files
+report/*.pptx
 
 # IDE
 .vscode/
