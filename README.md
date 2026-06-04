@@ -19,7 +19,8 @@ finalproject/
 ├── run_all.sh                          # 一键运行脚本
 ├── generate_charts.py                  # Python 可视化图表生成脚本
 ├── data/
-│   └── raw/                            # 9 个 CSV 原始数据文件
+│   ├── README.md                       # 数据文件夹说明（来源/下载方式/文件清单）
+│   └── raw/                            # 9 个 CSV 原始数据文件（~130MB，需自行下载）
 ├── sql/
 │   ├── 01_create_database.sql          # 创建数据库
 │   ├── 02_create_tables.sql            # 建表 + 约束 + 索引
@@ -28,7 +29,8 @@ finalproject/
 │   ├── 04b_triggers_procedures.sql     # 触发器 + 存储过程（增强版）
 │   └── 05_analysis_queries.sql         # 16 个分析查询
 ├── report/
-│   ├── initial_report.md               # 完整技术报告（含图片索引）
+│   ├── initial_report.md               # 完整技术报告（v3.0，含 SQL + 执行结果）
+│   ├── ppt_content.md                  # PPT 专用精简版（主线叙事 + 核心代码/结果）
 │   └── charts/                         # 15 张 PNG 可视化图表
 │       ├── 01_monthly_revenue_trend.png
 │       ├── 02_top_states_revenue.png
@@ -109,11 +111,37 @@ UNION ALL SELECT 'inventory', COUNT(*) FROM inventory;
 | **分析查询** | `05_analysis_queries.sql` | 10 个业务分析 SQL |
 | **数据可视化** | `generate_charts.py` | 15 张专业 PNG 图表（matplotlib + seaborn）|
 
-## 数据来源
+## 数据来源与数据文件
+
+### 数据来源
 
 - **Kaggle**: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 - **规模**: 约 10 万订单，9 张 CSV，130MB
 - **许可**: CC-BY-NC-SA-4.0
+
+### 数据文件位置
+
+原始 CSV 文件存放在 `data/raw/` 目录下（已被 `.gitignore` 排除，需自行下载）：
+
+```
+data/
+├── README.md          # 数据说明文档
+└── raw/               # 原始 CSV 文件（~130MB，未纳入 Git）
+    ├── olist_customers_dataset.csv
+    ├── olist_sellers_dataset.csv
+    ├── olist_products_dataset.csv
+    ├── olist_orders_dataset.csv
+    ├── olist_order_items_dataset.csv
+    ├── olist_order_payments_dataset.csv
+    ├── olist_order_reviews_dataset.csv
+    ├── olist_geolocation_dataset.csv
+    └── product_category_name_translation.csv
+```
+
+### 获取方式
+
+1. **从 Kaggle 下载**（推荐）：访问 [数据集页面](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 下载 `brazilian-ecommerce.zip`，解压后将 CSV 文件放入 `data/raw/`
+2. **查看详细说明**：参考 `data/README.md` 获取完整的数据文件清单、字段说明和导入方法
 
 ## 评分要点对应
 

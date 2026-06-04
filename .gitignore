@@ -8,7 +8,8 @@ __pycache__/
 *.egg-info/
 
 # Data files (raw CSVs and zip — too large for git, can download from Kaggle)
-data/
+data/raw/
+data/*.zip
 
 # PPT files
 report/*.pptx
